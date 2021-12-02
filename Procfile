@@ -1,1 +1,1 @@
-web: /app/bin/prometheus --config.file=$HOME/prometheus.yml --web.enable-admin-api --web.listen-address=:$PORT
+web: envsubst < ./prometheus.yml > ./prometheus-injected.yml; envsubst < ./web.yml > ./web-injected.yml; /app/bin/prometheus --config.file=./prometheus-injected.yml --web.config.file=./web-injected.yml --web.listen-address=:$PORT

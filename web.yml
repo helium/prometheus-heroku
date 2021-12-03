@@ -3,4 +3,4 @@ basic_auth_users:
 
 tls_server_config:
     client_auth_type: "RequireAndVerifyClientCert"
-    client_ca_file: /etc/ssl/certs/ca-certificates.crt
+    client_ca_file: "../etc/ssl/certs/ca-certificates.crt"
